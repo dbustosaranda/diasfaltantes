@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Dias Faltantes</title>
     </head>
     <body>
         <%--
@@ -29,12 +29,11 @@
             calendario.setTime(fechahoy);
             
             int diasano = 365;
-            int diasrestantesano = calendario.get(calendar.DAY_OF_YEAR);
-            
-
-            
-            
+            int diasrestantesano = calendario.get(Calendar.DAY_OF_YEAR);
         %>
- 
+        <h3>Hola, hoy es: <%=fechahoy%></h3>
+        <br>
+        <h3>Quedan: <%=diasano-diasrestantesano%> dias para año nuevo</h3>
+        
     </body>
 </html>
